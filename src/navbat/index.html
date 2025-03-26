@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavbatMed - Tibbiy Navbat Tizimi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/narmalize.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="../images/logo.png.png" alt="NavbatMed Logo">
+        </div>
+        <div class="district-selection">
+            <select id="district-select">
+                <option value="all">Tumaningizni tanlang</option>
+                <option value="urganch">Urganch shahar</option>
+                <option value="xiva">Xiva tuman</option>
+                <option value="bagat">Bogot tuman</option>
+                <option value="gurlan">Gurlan tuman</option>
+                <option value="qoshkopir">Qoshkopir tuman</option>
+                <option value="shovot">Shovot tuman</option>
+                <option value="yangiariq">Yangiariq tuman</option>
+                <option value="yangibozor">Yangibozor tuman</option>
+                <option value="hazorasp">Hazorasp tuman</option>
+                <option value="xonqa">Xonqa tuman</option>
+            </select>
+        </div>
+        <div class="polyclinics-list" id="polyclinics-list">
+            <!-- Polyclinics will be loaded here dynamically -->
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="welcome-message" id="welcome-message">
+            <h2>NavbatMed tizimiga xush kelibsiz</h2>
+            <p>Iltimos, chap paneldagi poliklinikalardan birini tanlang</p>
+        </div>
+
+        <div class="system-container" id="system-container">
+            <div class="dashboard-header">
+                <h2 class="polyclinic-name" id="current-polyclinic"></h2>
+                <button class="logout-button" id="logout-button">Chiqish</button>
+            </div>
+
+            <table class="patient-table">
+                <thead>
+                    <tr>
+                        <th>Ism</th>
+                        <th>Tug'ilgan sana</th>
+                        <th>Tuman</th>
+                        <th>Shifoxona</th>
+                        <th>Bo'lim</th>
+                        <th>Sana</th>
+                        <th>Vaqt</th>
+                        <th>Telefon</th>
+                    </tr>
+                </thead>
+                <tbody id="patient-data">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="login-modal">
+        <div class="login-container">
+            <h2 id="login-title">Tizimga kirish</h2>
+            <form class="login-form" id="login-form">
+                <input type="text" id="login-username" placeholder="Login" required>
+                <input type="password" id="login-password" placeholder="Parol" required>
+                <button type="submit" class="login-button">Kirish</button>
+            </form>
+        </div>
+    </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
